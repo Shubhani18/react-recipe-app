@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import TrendingSlider from './TrendingSlider'
+import { useParams,Link } from 'react-router-dom'
 
 
-const Category = () => {
-    const {name} = useParams()
+const SearchElement = () => {
     // console.log(useParams())
+    const {searchTerm} = useParams();
 
+    
     const [data, setData] = useState([])
 
     useEffect(() => {
   
       const fetchData = async () => {
-        const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`)
+        const api = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
         const data = await api.json();
   
-        // console.log(data);
+        // console.log(data.meals);
         setData(data.meals)
         // console.log(data)
       }
   
       fetchData();
-    }, [name])
-
+    }, [searchTerm])
 
   return (
- <>
- <Navbar />
+    <>
+    <Navbar />
 <div style={{
     width:'90%',
     margin:'auto',
@@ -56,8 +56,9 @@ const Category = () => {
  </div>
 
  <TrendingSlider />
- </>
+    
+    </>
   )
 }
 
-export default Category
+export default SearchElement

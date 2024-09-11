@@ -1,0 +1,93 @@
+.recipe-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.recipe-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-img img {
+    width: 100%;
+    max-width: 18rem;
+    border-radius: 10px;
+}
+
+.recipe-details {
+    width: 60%;
+    text-align: left;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.translatebtn {
+    background-color: #28a745;
+}
+
+.speakbtn {
+    background-color: #ffc107;
+}
+
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.language-select select {
+    padding: 8px;
+    font-size: 1rem;
+}
+select{
+    background-color: aquamarine;
+}
+select>option{
+    background-color: aquamarine;
+}
+
+.ingredient {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.instruction {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.translated-text {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 15px;
+}
+
+.active {
+    background-color: #0056b3;
+}
+
